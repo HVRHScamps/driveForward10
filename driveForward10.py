@@ -2,6 +2,7 @@ import libhousy
 #You can define helper functions here, make sure to but them *above* the main function
 first = True
 def main(robot: libhousy.robot):
+    global first
     if first:
         robot.lDriveEncoder.Reset()
         robot.rDriveEncoder.Reset()
