@@ -15,7 +15,7 @@ def main(robot: libhousy.robot):
         robot.rDrive.Set(0)
 
     if robot.lDriveEncoder.Get() > 120:
-        robot.rDrive.Set(0)
+        robot.lDrive.Set(0)
 
     # This tells the robot we're done and it can move on
-    return libhousy.DONE
+        return libhousy.DONE
