@@ -13,10 +13,10 @@ def main(robot: libhousy.robot):
         robot.lDrive.Set(0)
 
     if robot.rDriveEncoder.Get() <125:
-        robot.rDrive.Set(-0.3)
+        robot.rDrive.Set(0.3)
 
     elif robot.rDriveEncoder.Get() >115:
-        robot.rDrive.Set(0.3)
+        robot.rDrive.Set(-0.3)
     else:
         robot.rDrive.Set(0)
     #return libhousy.DONE
