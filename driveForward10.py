@@ -19,7 +19,7 @@ def main(robot: libhousy.robot):
         robot.rDrive.Set(0.3)
     else:
         robot.rDrive.Set(0)
-    return libhousy.DONE
+    #return libhousy.DONE
 
 
     
