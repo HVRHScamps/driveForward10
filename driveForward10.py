@@ -5,27 +5,24 @@ from more_itertools import first
 
 def main(robot: libhousy.robot):
     # Here is where your recurring code will go
-   global first 
-   if first:
-    robot.rDriveEncoder.Reset()
-    robot.lDriveEncoder.Reset()
-    first = False
+    if robot.rDriveEncoder.Reset():
+        robot.lDriveEncoder.Reset()
+    
 
     if robot.rDriveEncoder.Get() >125:
-        error = 0.0 - rDriveEncoder.Get() <115
+        error = 0.0 - robot.rDriveEncoder.Get() <115
         speed = error * 0.3
         robot.rDrive.Set(0.3)
 
     else: 
         robot.rDrive.Set(0)
 
-    if robot.lDriveEncoder.Get() <115:
-        robot.lDrive.Set(0.3)
-        error = 0.0 - robot.lDriveEncoder.Get()
+    if robot.lDriveEncoder.Get() >125:
+        error = 0.0 - robot.lDriveEncoder.Get() <115
         speed = error * 0.3
         robot.lDrive.Set(0.3)
     elif robot.lDriveEncoder.Get() >125:
-        error = 0.0 - robot.lDriveEncoder.Get() <115
+        error = 0.0 - robot.lDriveEncoder.Get()
         speed = error * 0.3
         robot.lDrive.Set(0.3)
     else:
