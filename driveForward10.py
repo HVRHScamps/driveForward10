@@ -11,24 +11,24 @@ def main(robot: libhousy.robot):
 
     if robot.rDriveEncoder.Get() >125:
         error = 0.0 - robot.rDriveEncoder.Get()
-        speed = error * -0.3
-        robot.rDrive.Set(-0.3)
+        speed = error * -0.25
+        robot.rDrive.Set(-0.25)
     elif robot.rDriveEncoder.Get() <115:
         error = 0.0 - robot.rDriveEncoder.Get()
-        speed = error * 0.3
-        robot.rDrive.Set(0.3)
+        speed = error * 0.25
+        robot.rDrive.Set(0.25)
 
     else: 
         robot.rDrive.Set(0)
 
     if robot.lDriveEncoder.Get() >125:
         error = 0.0 - robot.lDriveEncoder.Get()
-        speed = error * -0.3
-        robot.lDrive.Set(-0.3)
+        speed = error * -0.25
+        robot.lDrive.Set(-0.25)
     elif robot.lDriveEncoder.Get() <115:
         error = 0.0 - robot.lDriveEncoder.Get()
-        speed = error * 0.3
-        robot.lDrive.Set(0.3)
+        speed = error * 0.25
+        robot.lDrive.Set(0.25)
     else:
         robot.lDrive.Set(0)
     #return libhousy.DONE
